@@ -47,9 +47,9 @@ const changeOfBackgroundcolor = () => {
 
 let timerId;
 function handleStartBtn() {
+    startBtnRef.disabled = true;
     timerId = setInterval(changeOfBackgroundcolor, 1000);
     startBtnRef.removeEventListener('click', handleStartBtn);
-    startBtnRef.disabled = true;
     stopBtnRef.addEventListener('click', handleStopBtn);
 };
 
